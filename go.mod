@@ -1,5 +1,4 @@
-module github.com/lichti/whats-spoofing
-
+module github.com/taoufiq-am/whats-spoofy
 go 1.21.4
 
 require (
