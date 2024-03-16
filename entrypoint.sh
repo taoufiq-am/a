@@ -15,7 +15,7 @@ fi
 # Start in the foreground or run the command passed as arguments to the entrypoint script
 if [ "$1" = '' ]; then
     echo "Starting whatsbot in the foreground..."
-    /app/whats-spoofing
+    /app/whats-spoofy
     sleep 5
 else
     echo "Running command passed as arguments to the entrypoint script..."

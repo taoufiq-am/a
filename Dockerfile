@@ -15,7 +15,7 @@ RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -v -a -o whats-spoofing
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-CMD ["/app/whats-spoofing"]
+CMD ["/app/whats-spoofy"]
 
 ENTRYPOINT [ "/entrypoint.sh" ]
 
