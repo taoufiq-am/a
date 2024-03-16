@@ -172,7 +172,7 @@ func sendSpoofedTalkDemo(chatJID types.JID, spoofedJID types.JID, toGender strin
 	msgmap["en"]["boy"] = make(map[int]string)
 	msgmap["en"]["boy"][0] = "saf soni lia"
 	msgmap["en"]["boy"][1] = "All yours!"
-	msgmap["en"]["girl"] = "zin diali"
+	msgmap["en"]["girl"] = make(map[int]string)
 	msgmap["en"]["boy"] = make(map[int]string)
 	// msgmap["en"]["girl"] = make(map[int]string)
 	msgmap["en"]["girl"][0] = "Last night was wonderful, come more often when my husband isn't here..."
