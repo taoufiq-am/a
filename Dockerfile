@@ -10,7 +10,7 @@ WORKDIR /app
 COPY . .
 
 RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go get
-RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -v -a -o whats-spoofing
+RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -v -a -o whats-spoofy
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
