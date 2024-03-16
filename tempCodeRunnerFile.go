@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/hegedustibor/htgo-tts"
 	"context"
 	"errors"
 	"fmt"
@@ -117,7 +116,7 @@ func sendSpoofedReplyLocation(chatID types.JID, fromID types.JID, msgID string, 
 		ExtendedTextMessage: &waProto.ExtendedTextMessage{
 			Text:        proto.String(myTtext),
 			PreviewType: waProto.ExtendedTextMessage_NONE.Enum(),
-			PreviewType: waProto.ExtendedTextMessage_NONE.Enum(),
+			// PreviewType: waProto.ExtendedTextMessage_NONE.Enum(),
 			ContextInfo: &waProto.ContextInfo{
 				StanzaId:    proto.String(msgID),
 				Participant: proto.String(fromID.String()),
@@ -164,11 +163,6 @@ func sendSpoofedTalkDemo(chatJID types.JID, spoofedJID types.JID, toGender strin
 	msgmap["en"] = make(map[string]map[int]string)
 	msgmap["en"]["generic"] = make(map[int]string)
 	msgmap["en"]["generic"][0] = "wach"
-	speech := htgotts.Speech{}
-	speech.SetLanguage(language)
-	for _, val := range msgmap[language][toGender] {
-		speech.Speak(val)
-	}
 	msgmap["en"]["generic"][1] = "ach khbark"
 	msgmap["en"]["generic"][2] = "lhamdo lilah , malin dar labas 3lihom ?"
 	msgmap["en"]["generic"][3] = "mhtajk tmchi m3aya l wahd lblasa"
